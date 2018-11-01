@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        app:layout_behavior="com.kx.behavior.zoomimagebehavior.behavior.ZoomImageBehavior"
+        android:id="@+id/recyclerView"
+        android:background="#f1f1f1"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.kx.behavior.zoomimagebehavior.behavior.ZoomImageHeader
+        android:orientation="vertical"
+        android:id="@+id/zoomImageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+    </com.kx.behavior.zoomimagebehavior.behavior.ZoomImageHeader>
+
+</android.support.design.widget.CoordinatorLayout>
